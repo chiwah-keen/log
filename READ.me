@@ -1,0 +1,11 @@
+日志自动分类的class
+"./" 路径， divideleve: 分类级别，0， 1， 2 , loglevel: 日志级别
+例子：
+l = Log("./", dividelevel=2, loglevel="debug")
+l.debug("abcde")
+l.info("abcde")
+l.warn("abcde")
+try:
+    raise Exception("my .... test")
+except:
+    l.error("abcde")
