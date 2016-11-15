@@ -19,7 +19,7 @@ class Log(object):
         self.log_maxsize = maxsize
         self.log_level = self.LOG_LEVELS.get(loglevel.lower()) or logging.DEBUG
         self.log_backupcount = backupcount
-        self.log_fmt = fmt or "[%(levelname)s]  %(asctime)s - %(filename)s:%(lineno)s %(message)s"
+        self.log_fmt = fmt or "[%(levelname)s] %(asctime)s-%(filename)s:%(lineno)s %(message)s"
         self._logger = dict()
         self.divid_levl = dividelevel
         if self.divid_levl == 0:
